@@ -15,14 +15,5 @@ require 'pry'
   # }
   
 def remove_strawberry(contacts)
-  contacts["Freddy Mercury"].each do |attribute|
-                    binding.pry
-
-    if attribute == :favorite_ice_cream_flavors
-      attribute.each do |flavor|
-
-        flavor.delete("strawberry")
-      end
-    end
-  end
+  contacts["Freddy Mercury"][:favorite_ice_cream_flavors].delete("strawberry")
 end
